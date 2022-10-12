@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('signup')?.addEventListener('click', () => {
         let username = document.getElementById('username') as HTMLInputElement;
-        if (username.value.length >= 30 || username.value.length <= 6){
+        if (username.value.length > 30 || username.value.length < 6){
             alert("A felhasználónév nem megfelelő")
         }
 
@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (remail.value != email.value){
             alert("A két email nem egyezik");
+          }
+
+          let password = document.getElementById('password') as HTMLInputElement;
+
+          if (password.value.length < 5 || password.value.length > 10) {
+            alert("A jelszó hossza nem megfelelő")
           }
     })
 
