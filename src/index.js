@@ -13,5 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 .match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
         };
         validateEmail(email.value);
+        let remail = document.getElementById('re-email');
+        if (remail.value != email.value) {
+            alert("A két email nem egyezik");
+        }
     });
 });

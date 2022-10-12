@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
           };
         
           validateEmail(email.value);
+
+          let remail = document.getElementById('re-email') as HTMLInputElement;
+
+          if (remail.value != email.value){
+            alert("A két email nem egyezik");
+          }
     })
 
 })
