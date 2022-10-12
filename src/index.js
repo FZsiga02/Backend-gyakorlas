@@ -30,5 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
             alert("A két jelszó nem egyezik");
             success = false;
         }
+        let terms = document.getElementById('terms');
+        if (terms.checked == false) {
+            alert("El kell fogadni a feltételeket");
+            success = false;
+        }
+        if (success) {
+            alert("Sikeres regisztráció");
+        }
     });
 });
